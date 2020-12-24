@@ -5,7 +5,7 @@ The purpose of the data engineering capstone project is to give you a chance to 
 A use case for this analytics database is to find immigration patterns to the US. We could try to find answears to questions such as, do people from countries with unhappy or happy rating immigrate to the US in large numbers, or which airport is more frequent for immigrants.
 
 ## Data and Code
-All the data for this project was loaded into S3 prior to commencing the project, and one exception is the i94res.csv file which was loaded into Amazon EMR filesystem. 
+All the data for this project was loaded into S3 before start the project, only is the i94_state.csv file which was loaded into Amazon EMR filesystem. 
 
 In addition to the data files, the project workspace includes:
 * **iam.cfg** - contains configuration that allows the ETL pipeline to access AWS EMR cluster. 
@@ -14,7 +14,7 @@ In addition to the data files, the project workspace includes:
 ## Prerequisites
 * AWS EMR cluster
 * Apache Spark
-* Python 3 to run the python scripts
+* Python 3
 
 ### The project follows the following steps:
 * Step 1: Scope the Project and Gather Data
