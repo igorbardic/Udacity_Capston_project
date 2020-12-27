@@ -75,5 +75,5 @@ Data dictionary for new data model
 * I use Apache Spark beacause it's ability to handle multiple file formats with large amounts of data and it's fast for big data and large dataset. Immigration data will be updated mounthly and other data yearly. 
 * Scenario:
 If the data was increased by 100x - Spark can easyly increase number of nodes in our AWS cluster.
-If the pipelines were run on a daily basis by 7am - We can use Apache Airflow and schedule data pipline.
-If the database needed to be accessed by 100+ people - We can use Amazon Redshift.
+If the pipelines were run on a daily basis by 7am - We can use Apache Airflow and schedule data pipline for this job.
+If the database needed to be accessed by 100+ people - We can use Amazon Redshift and extend.
