@@ -2,21 +2,22 @@
 
 ## Project Summary
 The purpose of the data engineering capstone project is to give you a chance to combine what you've learned throughout the program. The objective of this project was to create an ETL pipeline for I94 immigration, airport data, state and world happiness rating data.
-A use case for this analytics database is to find immigration patterns to the US. We could try to find answears to questions such as, do people from countries with unhappy or happy rating immigrate to the US in large numbers, or which airport is more frequent for immigrants.
+Goal of this project is create analitics database to find immigration patterns to the US. Through the database we could try to find answears to questions such as, do people from countries with unhappy or happy rating immigrate to the US in large numbers, or which airport is more frequent for immigrants.
 
-## Data and Code
+## Data Code and Prerequisites
+Prerequisites: AWS EMR cluster, Apache Spark, Python 3
 All the data for this project was loaded into S3 before start the project, only is the i94_state.csv file which was loaded into Amazon EMR filesystem. 
 
 In addition to the data files, the project workspace includes:
 * **iam.cfg** - contains configuration that allows the ETL pipeline to access AWS EMR cluster. 
 * **Capstone_project_Happy.ipynb** - jupyter notebook that was used for building the ETL pipeline.
 
-## Prerequisites
-* AWS EMR cluster
-* Apache Spark
-* Python 3
-
 ### The project follows the following steps:
+Data Engineering Capstone Project Happy
+Project Summary
+The goal of this project was to create ETL pipleine for immigration, airport data, state and world happiness rating data. We could try to find answears to questions such as, do people from countries with unhappy or happy rating immigrate to the US in large numbers, or which airport is more frequent for immigrants.
+
+The project follows the following steps:
 * Step 1: Scope the Project and Gather Data
 * Step 2: Explore and Assess the Data
 * Step 3: Define the Data Model
@@ -35,14 +36,12 @@ To create the database through the following steps:
 * Create visa dimension table from the I94 immigration data and this table links to the fact table through the visa_type_key field.
 * Create fact table from the clean I94 immigration dataset and the visa_type dimension.
 
-The technology used in this project is Amazon S3, Apache Spark. Data will be read and staged from the customers repository using Spark.
-
 ## Step 2: Explore and Assess the Data
 
- Explore, cleaning and data analysis is in to the jupyter notebook - Capstone_project_Happy.ipynb.
+Explore, cleaning and data analysis is in to the jupyter notebook - Capstone_project_Happy.ipynb.
 
 ## Step 3: Define the Data Model
-### 3.1 Conceptual Data Model
+### 3.1 Data Model
 
 ![Database schema](Capstone_project_happy_data_model.jpg)
 
@@ -75,5 +74,5 @@ Data dictionary for new data model
 * I use Apache Spark beacause it's ability to handle multiple file formats with large amounts of data and it's fast for big data and large dataset. Immigration data will be updated mounthly and other data yearly. 
 * Scenario:
 If the data was increased by 100x - Spark can easyly increase number of nodes in our AWS cluster.
-If the pipelines were run on a daily basis by 7am - We can use Apache Airflow and schedule data pipline for this job.
-If the database needed to be accessed by 100+ people - We can use Amazon Redshift and extend.
+If the pipelines were run on a daily basis by 7am - We can use Apache Airflow and schedule data pipline.
+If the database needed to be accessed by 100+ people - We can use Amazon Redshift.
